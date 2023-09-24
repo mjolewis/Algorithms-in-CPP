@@ -5,7 +5,8 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Algorithms-in-CPP
         "main.cpp"
-        src/TwoPointers/LongestPalindrome.hpp)
+        src/TwoPointers/LongestPalindrome.hpp
+        src/TwoPointers/MonotonicArray.hpp)
 
 enable_testing()
 add_subdirectory(Google_tests)

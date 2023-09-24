@@ -10,7 +10,8 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 # 'test1.cpp tests2.cpp' are source files with tests
 #add_executable(Google_Tests_run test1.cpp tests2.cpp)
 add_executable(Google_Tests_run TwoPointers/LongestPalindromeTest.cpp
-        TwoPointers/LongestPalindromeTest.cpp
         ../src/TwoPointers/LongestPalindrome.hpp
-        QuickTest.cpp)
+        QuickTest.cpp
+        TwoPointers/MonotonicArrayTest.cpp
+)
 target_link_libraries(Google_Tests_run gtest gtest_main)
