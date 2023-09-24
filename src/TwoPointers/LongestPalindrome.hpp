@@ -11,7 +11,7 @@ class LongestPalindrome
 {
 private:
     // Finds the longest palindrome by continuously expanding outward until a palindrome no longer exists
-    static std::pair<int, int> findPalindromeIndices(const std::string& str, int leftIdx, int rightIdx)
+    static std::pair<int, int> getLongestPalindromeFrom(const std::string& str, int leftIdx, int rightIdx)
     {
         while (leftIdx >= 0 && rightIdx < str.length())
         {
@@ -36,8 +36,8 @@ public:
         std::pair<int, int> longest = std::make_pair(0, 1);
         for (int i = 1; i < str.length(); ++i)
         {
-            std::pair<int, int> evenLengthPalindrome = findPalindromeIndices(str, i - 1, i);
-            std::pair<int, int> oddLengthPalindrome = findPalindromeIndices(str, i - 1, i + 1);
+            std::pair<int, int> evenLengthPalindrome = getLongestPalindromeFrom(str, i - 1, i);
+            std::pair<int, int> oddLengthPalindrome = getLongestPalindromeFrom(str, i - 1, i + 1);
             std::pair<int, int> currentLongest = calculateLongest(evenLengthPalindrome, oddLengthPalindrome);
             longest = calculateLongest(longest, currentLongest);
         }
