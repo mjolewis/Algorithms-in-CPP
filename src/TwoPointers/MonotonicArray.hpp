@@ -15,11 +15,11 @@ class MonotonicArray
 {
 public:
     static bool isMonotonic(std::vector<int> vec) {
-        if (array.size() <= 1) return true;
+        if (vec.size() <= 1) return true;
 
         bool isMonotonicallyIncreasing = true;
         bool isMonotonicallyDecreasing = true;
-        for (int i = 1; i < array.size(); ++i)
+        for (int i = 1; i < vec.size(); ++i)
         {
             if (vec.at(i) < vec.at(i - 1)) isMonotonicallyIncreasing = false;
             if (vec.at(i) > vec.at(i - 1)) isMonotonicallyDecreasing = false;
